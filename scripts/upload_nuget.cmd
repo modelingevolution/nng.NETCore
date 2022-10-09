@@ -1,0 +1,1 @@
+dotnet nuget push "../bin/Release/nng.NET.1.4.0-rc2.nupkg" --source https://nuget.pkg.github.com/acceliox/index.json
