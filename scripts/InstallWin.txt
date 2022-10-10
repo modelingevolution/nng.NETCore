@@ -1,0 +1,24 @@
+Install Strawberry Perl
+Install Python 3
+
+pip install Jinja2
+
+open x64 native command prompt...
+
+https://github.com/nanomsg/nng.git
+
+F:
+cd F:\Workroot\mbedtls
+
+scripts\make_generated_files.bat
+mkdir build && cd build
+cmake -D CMAKE_BUILD_TYPE=Release -DUSE_SHARED_MBEDTLS_LIBRARY=On ..
+cmake --build . --config Release
+cmake --install . --config Release --prefix mbedtls-local
+
+cd F:\Workroot\nng
+mkdir build && cd build
+cmake -DBUILD_SHARED_LIBS=ON -DNNG_ENABLE_TLS=ON -DCMAKE_BUILD_TYPE=Release -DNNG_ELIDE_DEPRECATED=ON -DNNG_TESTS=OFF -DNNG_TOOLS=OFF -DMBEDTLS_ROOT_DIR=F:\Workroot\mbedtls\build\mbedtls-local ..
+cmake -DNNG_ENABLE_TLS=ON .. -DMBEDTLS_ROOT_DIR:STRING=F:\Workroot\mbedtls\build\mbedtls-local
+cmake --build . --config Release
+cmake --install . --config Release --prefix nng-install
