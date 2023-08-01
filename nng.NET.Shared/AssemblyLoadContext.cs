@@ -46,16 +46,7 @@ namespace nng
             if (assemblyName.Name == managedAssemblyName)
             {
                 // Try framework-specific managed assembly path
-                var path = Path.Combine(assemblyPath, "runtimes", "any", "lib", 
-                    #if NETSTANDARD1_5
-                    "netstandard1.5"
-                    #elif NETSTANDARD2_0
-                    "netstandard2.0"
-                    #elif NET5_0
-                    "net5.0"
-                    #else
-                    #error "Unsupported framework?"
-                    #endif
+                var path = Path.Combine(assemblyPath, "runtimes", "any", "lib", "net6.0"
                     , managedAssemblyName + ".dll");
                 if (!File.Exists(path))
                 {
@@ -72,11 +63,7 @@ namespace nng
         {
             if (unmanagedDllName == "nng")
             {
-#if NETSTANDARD2_0
-                bool is64bit = Environment.Is64BitProcess;
-#else
                 bool is64bit = (IntPtr.Size == 8);
-#endif
                 string arch = string.Empty;
                 switch (RuntimeInformation.ProcessArchitecture)
                 {
@@ -104,7 +91,8 @@ namespace nng
                     throw new Exception("Unexpected runtime OS platform: " + RuntimeInformation.OSDescription);
                 }
             }
-            return IntPtr.Zero;
+
+            return base.LoadUnmanagedDll(unmanagedDllName);
         }
 
         const string managedAssemblyName = "nng.NET";

@@ -27,10 +27,7 @@ __Goals of nng<span>.</span>NET__:
 ## Usage
 
 Supports projects targeting:
-- .NET 5
-- .NET Core App 1.0+
-- .NET Standard 1.5+
-    - [`SuppressUnmanagedCodeSecurity`](https://docs.microsoft.com/en-us/dotnet/api/system.security.suppressunmanagedcodesecurityattribute) is used with .NET Standard 2.0+ for improved PInvoke performance
+- .NET 6
 
 [Supported platforms](https://github.com/jeikabu/nng.NETCore/tree/master/nng.NETCore/runtimes):
 - Windows Vista or later 32/64-bit (built on Windows Server 2019)
