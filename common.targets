@@ -6,19 +6,16 @@
     <MSBuildTreatWarningsAsErrors>true</MSBuildTreatWarningsAsErrors>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(TargetFramework)'=='net6.0'">
     <LangVersion>9.0</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup>
     <VersionPrefix>1.4.0</VersionPrefix>
-    <VersionSuffix>rc2</VersionSuffix>
-    <Authors>Jeikabu</Authors>
+    <VersionSuffix>rc3</VersionSuffix>
+    <Authors>Jeikabu, James Freiwirth</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Owners>Jeikabu</Owners>
-    <PackageProjectUrl>https://github.com/acceliox/nng.NETCore</PackageProjectUrl>
+    <Owners>James Freiwirth</Owners>
+    <PackageProjectUrl>https://github.com/endeavour/nng.NETCore</PackageProjectUrl>
     <Summary>.NET Core bindings to nng</Summary>
     <PackageTags>nng csnng</PackageTags>
     <Description>.NET Core bindings to nng (https://github.com/nanomsg/nng)</Description>
