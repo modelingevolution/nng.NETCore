@@ -51,6 +51,8 @@ namespace nng
                     "netstandard1.5"
                     #elif NETSTANDARD2_0
                     "netstandard2.0"
+                    #elif NETSTANDARD2_1
+                    "netstandard2.1"                    
                     #elif NET5_0
                     "net5.0"
                     #elif NET6_0

@@ -6,6 +6,7 @@
     <OutputPath>..\packer\bin\$(Configuration)\lib\</OutputPath>
     <!-- To enable code coverage -->
     <DebugType>full</DebugType>
+    <TargetFrameworks>net6.0;netstandard2.1</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -14,8 +15,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="system.memory" Version="4.5.4" />
-    <PackageReference Include="system.valuetuple" Version="4.5.0" />
     <PackageReference Include="system.runtime.loader" Version="4.3.0" />
   </ItemGroup>
 

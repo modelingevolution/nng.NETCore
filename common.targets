@@ -1,7 +1,7 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.5;netstandard2.0;net6.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.1;net6.0</TargetFrameworks>
     <RootNamespace>nng</RootNamespace>
     <MSBuildTreatWarningsAsErrors>true</MSBuildTreatWarningsAsErrors>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
@@ -16,7 +16,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <VersionPrefix>1.4.4</VersionPrefix>
+    <VersionPrefix>1.4.5</VersionPrefix>
     <VersionSuffix></VersionSuffix>
     <Authors>Jeikabu, James Freiwirth</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>

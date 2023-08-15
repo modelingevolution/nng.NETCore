@@ -15,6 +15,7 @@
     See: https://docs.microsoft.com/en-us/nuget/reference/errors-and-warnings/nu5128#scenario-2
     -->
     <NoWarn>$(NoWarn);NU5128</NoWarn>
+    <TargetFrameworks>net6.0;netstandard2.1</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>
