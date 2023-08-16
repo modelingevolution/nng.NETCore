@@ -16,7 +16,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <VersionPrefix>1.4.5</VersionPrefix>
+    <VersionPrefix>1.4.6</VersionPrefix>
     <VersionSuffix></VersionSuffix>
     <Authors>Jeikabu, James Freiwirth</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
