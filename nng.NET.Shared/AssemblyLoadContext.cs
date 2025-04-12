@@ -56,7 +56,9 @@ namespace nng
                     #elif NET5_0
                     "net5.0"
                     #elif NET6_0
-                    "net6.0"                    
+                    "net6.0"    
+                    #elif NET9_0
+                    "net9.0"      
                     #else
                     #error "Unsupported framework?"
                     #endif

@@ -5,7 +5,7 @@
   <PropertyGroup>
     <!-- To enable code coverage -->
     <DebugType>full</DebugType>
-    <TargetFrameworks>net6.0;netstandard2.1</TargetFrameworks>
+    <TargetFrameworks>net9.0;</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup>
