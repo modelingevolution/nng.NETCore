@@ -13,8 +13,4 @@
     <PackageOutputPath>../bin/$(Configuration)</PackageOutputPath>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="system.runtime.loader" Version="4.3.0" />
-  </ItemGroup>
-
 </Project>

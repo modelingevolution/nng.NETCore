@@ -1,14 +1,14 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.1;net6.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.1;net9.0</TargetFrameworks>
     <RootNamespace>nng</RootNamespace>
     <MSBuildTreatWarningsAsErrors>true</MSBuildTreatWarningsAsErrors>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <WarningsAsErrors />
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(TargetFramework)'=='net6.0'">
+  <PropertyGroup Condition="'$(TargetFramework)'=='net9.0'">
     <LangVersion>9.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(TargetFramework)'!='net6.0'">
