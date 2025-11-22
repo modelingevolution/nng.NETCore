@@ -10,7 +10,7 @@
     Assemblies for targetted frameworks are in runtimes/ instead of lib/ or ref/ 
     See: https://docs.microsoft.com/en-us/nuget/reference/errors-and-warnings/nu5128#scenario-2
     -->
-    <TargetFrameworks>net9.0;</TargetFrameworks>
+    <TargetFrameworks>net9.0;net10.0</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>

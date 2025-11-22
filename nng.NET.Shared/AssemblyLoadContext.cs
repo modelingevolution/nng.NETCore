@@ -46,19 +46,21 @@ namespace nng
             if (assemblyName.Name == managedAssemblyName)
             {
                 // Try framework-specific managed assembly path
-                var path = Path.Combine(assemblyPath, "runtimes", "any", "lib", 
+                var path = Path.Combine(assemblyPath, "runtimes", "any", "lib",
                     #if NETSTANDARD1_5
                     "netstandard1.5"
                     #elif NETSTANDARD2_0
                     "netstandard2.0"
                     #elif NETSTANDARD2_1
-                    "netstandard2.1"                    
+                    "netstandard2.1"
                     #elif NET5_0
                     "net5.0"
                     #elif NET6_0
-                    "net6.0"    
+                    "net6.0"
                     #elif NET9_0
-                    "net9.0"      
+                    "net9.0"
+                    #elif NET10_0
+                    "net10.0"
                     #else
                     #error "Unsupported framework?"
                     #endif
