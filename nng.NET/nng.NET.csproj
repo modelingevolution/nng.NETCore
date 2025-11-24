@@ -5,7 +5,7 @@
   <PropertyGroup>
     <DebugType>full</DebugType>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <PackageId>nng.NET-LL</PackageId>
+    <PackageId>ModelingEvolution.Nng</PackageId>
     <!-- Needed to avoid `error NU5128` when running `dotnet pack`.
     Assemblies for targetted frameworks are in runtimes/ instead of lib/ or ref/ 
     See: https://docs.microsoft.com/en-us/nuget/reference/errors-and-warnings/nu5128#scenario-2
