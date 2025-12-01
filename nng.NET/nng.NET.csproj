@@ -6,8 +6,9 @@
     <DebugType>full</DebugType>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <PackageId>ModelingEvolution.Nng</PackageId>
+    <VersionPrefix>1.0.2</VersionPrefix>
     <!-- Needed to avoid `error NU5128` when running `dotnet pack`.
-    Assemblies for targetted frameworks are in runtimes/ instead of lib/ or ref/ 
+    Assemblies for targetted frameworks are in runtimes/ instead of lib/ or ref/
     See: https://docs.microsoft.com/en-us/nuget/reference/errors-and-warnings/nu5128#scenario-2
     -->
     <TargetFrameworks>net9.0;net10.0</TargetFrameworks>
@@ -19,25 +20,16 @@
     </ProjectReference>
   </ItemGroup>
 
+  <!-- Include native libraries in NuGet package -->
   <ItemGroup>
-    <None Update="runtimes\linux-arm64\native\libnng.so">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <None Include="runtimes\**\*.*">
+      <Pack>true</Pack>
+      <PackagePath>runtimes\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="runtimes\linux-x64\native\libnng.so">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="runtimes\win-x64\native\nng.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <None Include="build\nng.NET.targets">
+      <Pack>true</Pack>
+      <PackagePath>build\$(PackageId).targets</PackagePath>
     </None>
   </ItemGroup>
-
-  <!-- Must be run after build so output assembly is in runtimes/ -->
-  <Target Name="Runtimes" AfterTargets="Build">
-    <ItemGroup>
-      <Content Include="runtimes\**">
-        <PackagePath>runtimes</PackagePath>
-        <Visible>false</Visible>
-      </Content>
-    </ItemGroup>
-  </Target>
 </Project>

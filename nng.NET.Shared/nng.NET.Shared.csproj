@@ -10,6 +10,7 @@
 
   <PropertyGroup>
     <PackageId>ModelingEvolution.Nng.Shared</PackageId>
+    <VersionPrefix>1.0.2</VersionPrefix>
     <PackageOutputPath>../bin/$(Configuration)</PackageOutputPath>
   </PropertyGroup>
 
